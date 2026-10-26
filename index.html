@@ -3,130 +3,212 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Descubre el universo pop art de Lola Vértigo: color, cultura pop y obras originales que no pasan desapercibidas.">
-    <meta name="theme-color" content="#f4efdf">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Lola Vértigo — Pop art para mirar dos veces">
-    <meta property="og:description" content="Obras originales, color sin permiso y cultura pop con una vuelta de tuerca.">
-    <title>Lola Vértigo — Pop art para mirar dos veces</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "VisualArtist",
-        "name": "Lola Vértigo",
-        "description": "Artista visual contemporánea que crea obras pop art llenas de color, humor y referencias a la cultura popular.",
-        "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1200&q=85",
-        "url": "https://example.com/lola-vertigo",
-        "sameAs": [
-          "https://www.instagram.com/"
-        ],
-        "knowsAbout": ["Pop art", "Arte contemporáneo", "Serigrafía"]
-      }
-    </script>
+    <title>Dashboard de influencer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
-
-    <header class="site-header">
-      <a class="wordmark" href="#inicio" aria-label="Lola Vértigo, volver al inicio">LV<span aria-hidden="true">.</span></a>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#obra">Obra</a>
-        <a href="#artista">La artista</a>
-        <a class="nav-contact" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+    <header class="flex flex-col gap-2 border-b border-gray-200 bg-white p-4 sm:p-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <h1 class="text-xl font-bold text-gray-900 md:text-2xl">Dashboard de influencer</h1>
+      <nav aria-label="Navegación principal">
+        <ul class="flex flex-wrap gap-4 text-sm font-medium text-gray-600">
+          <li><a href="#kpis" class="hover:text-gray-900">KPIs</a></li>
+          <li><a href="#drivers" class="hover:text-gray-900">Drivers</a></li>
+          <li><a href="#detalle" class="hover:text-gray-900">Detalle operacional</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main id="contenido">
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Arte con volumen propio · Madrid</p>
-          <h1 id="hero-title">El mundo<br>necesita <span>más</span><br><em>color.</em></h1>
-          <p class="hero-description">Pop art para mirar dos veces. Iconos cotidianos, emociones gigantes y cero ganas de pasar desapercibida.</p>
-          <a class="button button-dark" href="#obra">Explora la obra <span aria-hidden="true">↓</span></a>
-          <p class="hero-note">Obra original, hecha para quedarse.</p>
-        </div>
+    <main>
+      <section id="kpis" aria-labelledby="kpis-title" class="p-4 sm:p-6 lg:p-8">
+        <h2 id="kpis-title" class="sr-only">KPIs</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="text-sm text-gray-500">Comisiones generadas</p>
+            <p class="mt-2 text-3xl font-bold text-gray-900">2.550 €</p>
+            <p class="mt-1 text-sm font-medium text-green-600">▲ +8,2% vs mes anterior</p>
+          </article>
 
-        <div class="hero-art" aria-label="Composición artística pop art">
-          <span class="burst burst-one" aria-hidden="true">WOW!</span>
-          <span class="burst burst-two" aria-hidden="true">★</span>
-          <figure class="hero-image image-main">
-            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1000&q=85" alt="Pintura abstracta contemporánea con formas enérgicas y colores intensos" fetchpriority="high">
-          </figure>
-          <figure class="hero-image image-detail">
-            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=85" alt="Detalle de una obra pictórica expuesta en una galería" loading="lazy">
-          </figure>
-          <p class="art-caption"><span aria-hidden="true">✳</span> Una pequeña dosis<br>de atrevimiento</p>
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="text-sm text-gray-500">Ventas totales</p>
+            <p class="mt-2 text-3xl font-bold text-gray-900">17.000 €</p>
+            <p class="mt-1 text-sm font-medium text-green-600">▲ +8,2% vs mes anterior</p>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="text-sm text-gray-500">Tasa de conversión</p>
+            <p class="mt-2 text-3xl font-bold text-gray-900">2,5%</p>
+            <p class="mt-1 text-sm font-medium text-red-600">▼ −0,3 pp vs mes anterior</p>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="text-sm text-gray-500">Engagement rate</p>
+            <p class="mt-2 text-3xl font-bold text-gray-900">4,8%</p>
+            <p class="mt-1 text-sm font-medium text-green-600">▲ +0,6 pp vs mes anterior</p>
+          </article>
         </div>
-        <a class="scroll-cue" href="#obra" aria-label="Desplazarse a la selección de obras">DESLIZA <span aria-hidden="true">↓</span></a>
       </section>
 
-      <section class="work-section section-wrap" id="obra" aria-labelledby="work-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / Selección reciente</p>
-            <h2 id="work-title">Un poco de <span>ruido</span><br>visual.</h2>
+      <section id="drivers" aria-labelledby="drivers-title" class="p-4 sm:p-6 lg:p-8">
+        <h2 id="drivers-title" class="sr-only">Drivers</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <h3 class="text-sm text-gray-500">Funnel de ventas</h3>
+            <div class="mt-4 space-y-3">
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Impresiones</span><span class="font-bold">188.000</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-full rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Clics</span><span class="font-bold">9.400</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-2/3 rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Carrito</span><span class="font-bold">705</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-1/3 rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Venta</span><span class="font-bold">235</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-1/6 rounded bg-indigo-500"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <h3 class="text-sm text-gray-500">Rendimiento por plataforma</h3>
+            <div class="mt-4 space-y-3">
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Instagram</span><span class="font-bold">8.500 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-1/2 rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>TikTok</span><span class="font-bold">5.100 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-1/3 rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>YouTube</span><span class="font-bold">3.400 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-1/5 rounded bg-indigo-500"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <h3 class="text-sm text-gray-500">Rendimiento por producto</h3>
+            <div class="mt-4 space-y-3">
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Producto A (50 €)</span><span class="font-bold">6.000 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-full rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Producto B (120 €)</span><span class="font-bold">5.400 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-5/6 rounded bg-indigo-500"></div></div>
+              </div>
+              <div>
+                <p class="flex justify-between text-sm text-gray-900"><span>Producto C (80 €)</span><span class="font-bold">5.600 €</span></p>
+                <div class="mt-1 h-2 rounded bg-gray-100"><div class="h-2 w-11/12 rounded bg-indigo-500"></div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="detalle" aria-labelledby="detalle-title" class="space-y-4 p-4 sm:p-6 lg:p-8">
+        <h2 id="detalle-title" class="sr-only">Detalle operacional</h2>
+
+        <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+          <h3 class="text-sm text-gray-500">Alertas</h3>
+          <ul class="mt-4 space-y-2">
+            <li class="rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+              <strong>Caída de conversión:</strong> la tasa bajó de 2,8% a 2,5% respecto al mes anterior.
+            </li>
+            <li class="rounded-md border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+              <strong>Pico de conversión:</strong> el 14 de octubre Instagram generó 31 ventas en un solo día.
+            </li>
+            <li class="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+              <strong>Anomalía:</strong> el tráfico de YouTube subió un 40% sin aumento de ventas.
+            </li>
+          </ul>
+        </article>
+
+        <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+          <h3 class="text-sm text-gray-500">Productos</h3>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="border-b border-gray-200 text-gray-500">
+                <tr>
+                  <th scope="col" class="py-2 pr-4 font-medium">Producto</th>
+                  <th scope="col" class="py-2 pr-4 text-right font-medium">Precio</th>
+                  <th scope="col" class="py-2 pr-4 text-right font-medium">Conversiones</th>
+                  <th scope="col" class="py-2 pr-4 text-right font-medium">Comisiones</th>
+                  <th scope="col" class="py-2 text-right font-medium">ROI</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-gray-900">
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">Producto A</th>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">50 €</td>
+                  <td class="py-2 pr-4 text-right">120</td>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">900 €</td>
+                  <td class="py-2 text-right font-medium text-green-600">+80%</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">Producto B</th>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">120 €</td>
+                  <td class="py-2 pr-4 text-right">45</td>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">810 €</td>
+                  <td class="py-2 text-right font-medium text-red-600">−10%</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">Producto C</th>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">80 €</td>
+                  <td class="py-2 pr-4 text-right">70</td>
+                  <td class="py-2 pr-4 text-right whitespace-nowrap">840 €</td>
+                  <td class="py-2 text-right font-medium text-green-600">+40%</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <p class="section-intro">Piezas hechas para provocar una sonrisa, una pregunta o las dos cosas a la vez.</p>
-        </div>
+        </article>
 
-        <div class="art-grid">
-          <article class="art-card art-card-large">
-            <a class="art-image art-image-pink" href="#contacto" aria-label="Consultar disponibilidad de Reina por un día">
-              <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1100&q=85" alt="Obra de arte colorida enmarcada, protagonista de una pared de galería" loading="lazy">
-              <span class="art-number" aria-hidden="true">01</span>
-              <span class="art-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="art-meta"><h3>Reina por un día</h3><p>Acrílico y descaro · 2025</p></div>
-          </article>
-          <article class="art-card art-card-offset">
-            <a class="art-image art-image-yellow" href="#contacto" aria-label="Consultar disponibilidad de Dulce caos">
-              <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=85" alt="Composición abstracta y expresiva en tonos vivos" loading="lazy">
-              <span class="art-number" aria-hidden="true">02</span>
-              <span class="art-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="art-meta"><h3>Dulce caos</h3><p>Serigrafía sobre papel · 2024</p></div>
-          </article>
-          <article class="art-card">
-            <a class="art-image art-image-blue" href="#contacto" aria-label="Consultar disponibilidad de Beso de neón">
-              <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=900&q=85" alt="Pintura abstracta en tonos cálidos y pinceladas gestuales" loading="lazy">
-              <span class="art-number" aria-hidden="true">03</span>
-              <span class="art-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="art-meta"><h3>Beso de neón</h3><p>Óleo y acrílico · 2024</p></div>
-          </article>
-        </div>
-        <p class="gallery-note"><span aria-hidden="true">✳</span> ¿Te has enamorado de alguna? <a href="#contacto">Pregúntame por ella.</a></p>
-      </section>
-
-      <section class="about-section" id="artista" aria-labelledby="about-title">
-        <div class="about-art" role="img" aria-label="Paleta de colores vibrantes y pinceladas abstractas">
-          <span class="about-sticker" aria-hidden="true">HECHO<br>CON<br>ACTITUD</span>
-          <span class="about-scribble" aria-hidden="true">✳</span>
-        </div>
-        <div class="about-copy">
-          <p class="eyebrow">02 / Detrás del color</p>
-          <h2 id="about-title">Hola, soy<br><span>Lola.</span></h2>
-          <p>Artista, coleccionista de referencias raras y defensora oficial de las paredes con personalidad. Pinto lo que me hace sentir algo —y espero que a ti también.</p>
-          <p>Mi trabajo mezcla la energía del pop art con historias cotidianas, humor y una paleta que nunca pide permiso.</p>
-          <a class="text-link" href="#contacto">¿Quieres saber más? <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contacto" aria-labelledby="contact-title">
-        <p class="eyebrow">03 / Tu pared tiene una misión</p>
-        <h2 id="contact-title">¿Le ponemos<br><em>color?</em></h2>
-        <p>Para encargos, colaboraciones o simplemente hablar de arte:</p>
-        <a class="button button-light" href="mailto:hola@lolavertigo.art">hola@lolavertigo.art <span aria-hidden="true">↗</span></a>
-        <span class="contact-spark" aria-hidden="true">✳</span>
+        <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+          <h3 class="text-sm text-gray-500">Plataformas</h3>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="border-b border-gray-200 text-gray-500">
+                <tr>
+                  <th scope="col" class="py-2 pr-4 font-medium">Plataforma</th>
+                  <th scope="col" class="py-2 pr-4 text-right font-medium">Alcance</th>
+                  <th scope="col" class="py-2 pr-4 text-right font-medium">Engagement</th>
+                  <th scope="col" class="py-2 text-right font-medium">Conversiones</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-gray-900">
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">Instagram</th>
+                  <td class="py-2 pr-4 text-right">98.000</td>
+                  <td class="py-2 pr-4 text-right">4,4%</td>
+                  <td class="py-2 text-right">118</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">TikTok</th>
+                  <td class="py-2 pr-4 text-right">62.000</td>
+                  <td class="py-2 pr-4 text-right">6,1%</td>
+                  <td class="py-2 text-right">70</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="py-2 pr-4 font-medium whitespace-nowrap">YouTube</th>
+                  <td class="py-2 pr-4 text-right">28.000</td>
+                  <td class="py-2 pr-4 text-right">3,2%</td>
+                  <td class="py-2 text-right">47</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <a class="wordmark footer-mark" href="#inicio" aria-label="Lola Vértigo, volver al inicio">LV<span aria-hidden="true">.</span></a>
-      <p>© <time datetime="2025">2025</time> Lola Vértigo. Hecho con color y café.</p>
-      <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de Lola Vértigo (se abre en una pestaña nueva)">Instagram <span aria-hidden="true">↗</span></a>
+    <footer class="border-t border-gray-200 bg-white p-4 text-sm text-gray-500 sm:p-6 lg:px-8">
+      <p>Datos de ejemplo. Comisión del 15% por venta.</p>
     </footer>
   </body>
 </html>
